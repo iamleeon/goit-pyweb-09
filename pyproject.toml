@@ -8,6 +8,8 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.12"
 scrapy = "^2.11.2"
+mongoengine = "^0.28.2"
+configparser = "^7.0.0"
 
 
 [build-system]
