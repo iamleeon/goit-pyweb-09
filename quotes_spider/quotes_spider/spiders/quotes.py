@@ -3,7 +3,6 @@ import scrapy
 from ..items import QuotesSpiderItem, AuthorsSpiderItem
 
 
-
 class QuotesSpider(scrapy.Spider):
     name = "quotes"
     allowed_domains = ["quotes.toscrape.com"]
@@ -33,7 +32,7 @@ class QuotesSpider(scrapy.Spider):
         description = response.xpath("/html//div[@class='author-description']/text()").get().strip()
 
         yield AuthorsSpiderItem(
-            fullname= fullname,
+            fullname=fullname,
             born_date=born_date,
             born_location=born_location,
             description=description
